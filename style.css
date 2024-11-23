@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    width: 350px;
+    background-color: rgb(92, 92, 119);
+    padding: 50px 10px 50px 10px;
+    border-radius: 20px;
+}
+
+#todoListText {
+    color: rgb(245, 245, 245);
+    -webkit-text-stroke: 1px rgb(178, 176, 176);
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+#Input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#Button {
+    padding: 10px;
+    color: white;
+    font-family: Poppins, sans-serif;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: rgb(139, 165, 241);
+    cursor: pointer;
+}
+
+.todoColor {
+    color: white;
+    font-size: 17px;
+    width: 200px;
+    font-family: Poppins, sans-serif;
+    display: flex;
+    gap: 10px;
+}
+
+.Delete {
+    background-color: red;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+}

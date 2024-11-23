@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>To Do Listing</title>
+</head>
+<body>
+    <div id="mainDiv">
+        <h1 id="todoListText">To Do Listing</h1>
+        <div class="flex">
+           <input type="text" id="Input" placeholder="Add task">
+           <button id="Button">Add</button>
+        </div>
+        <div id="div-text"></div>
+    </div>
+    
+</body>
+<script>
+
+    const Input = document.getElementById('Input');
+    const Button = document.getElementById('Button');
+    const divText = document.getElementById('div-text');
+
+
+    Button.addEventListener('click', function() {
+
+
+        const text = Input.value.trim();
+
+        if ( text === '') {
+            alert('Please Input Value')
+            div.remove()
+        }
+
+        const div = document.createElement('div')
+        const li = document.createElement('p')
+        li.classList.add('todoColor');
+        li.innerHTML = text;
+        divText.appendChild(div)
+        div.append(li)
+
+        div.style.display = 'flex'
+        li.style.textWrap = 'wrap'
+
+        const deleteButton = document.createElement('div')
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('Delete')
+        div.append(deleteButton)
+
+        deleteButton.addEventListener('click', function() {
+            div.remove();
+        })
+
+        Input.value = '';
+
+    });
+    
+
+    Input.addEventListener('keypress', (e) => {
+        if(e.key === 'Enter') {
+           const text = Input.value.trim();
+
+           if (text === '') {
+            alert('Please Input Value');
+            div.remove()
+        }
+
+        const div = document.createElement('div')
+        const li = document.createElement('p')
+        li.classList.add('todoColor');
+        li.innerHTML = text;
+        divText.appendChild(div)
+        div.append(li)
+
+        div.style.display = 'flex'
+
+        const deleteButton = document.createElement('div')
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('Delete')
+        div.append(deleteButton)
+
+        deleteButton.addEventListener('click', function() {
+            div.remove();
+        })
+
+        Input.value = '';
+
+       
+
+        }
+    })
+
+</script>
+</html>
